@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Company Profile</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container" id="home">
+        <div class="content">
+            <h1>Home</h1>
+            <p>Selamat datang di halaman utama kami.</p>
+            <img src="home-image.jpg" alt="Home Image">
+        </div>
+    </div>
+    <div class="container" id="about">
+        <div class="content">
+            <h1>About</h1>
+            <p>Kami adalah perusahaan yang bergerak di bidang XYZ.</p>
+            <img src="about-image.jpg" alt="About Image">
+        </div>
+    </div>
+    <div class="container" id="service">
+        <div class="content">
+            <h1>Service</h1>
+            <p>Kami menyediakan berbagai layanan berkualitas tinggi.</p>
+            <img src="service-image.jpg" alt="Service Image">
+        </div>
+    </div>
+    <div class="container" id="contact">
+        <div class="content">
+            <h1>Contact</h1>
+            <p>Silakan hubungi kami di alamat dan nomor telepon berikut.</p>
+            <img src="contact-image.jpg" alt="Contact Image">
+        </div>
+    </div>
+
+    <script>
+        // Mendapatkan hash dari URL
+        var currentHash = window.location.hash;
+
+        // Menampilkan elemen berdasarkan hash
+        function showSection() {
+            var sections = ['home', 'about', 'service', 'contact'];
+            sections.forEach(function(section) {
+                var element = document.getElementById(section);
+                if ('#' + section === currentHash) {
+                    element.style.display = 'block';
+                } else {
+                    element.style.display = 'none';
+                }
+            });
+        }
+
+        // Menjalankan fungsi saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection();
+        });
+
+        // Menjalankan fungsi saat hash berubah
+        window.addEventListener('hashchange', function() {
+            currentHash = window.location.hash;
+            showSection();
+        });
+    </script>
+</body>
+</html>

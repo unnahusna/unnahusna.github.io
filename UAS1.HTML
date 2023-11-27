@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+</head>
+<body>
+
+    <header>
+        <h1>Your Website</h1>
+        <!-- Include navigation or other header content if needed -->
+    </header>
+
+    <!-- Category Page Content -->
+    <section id="category" style="display: none;">
+        <h2>Category Page</h2>
+        <!-- Your category content goes here -->
+    </section>
+
+    <!-- Product Page Content -->
+    <section id="product" style="display: none;">
+        <h2>Product Page</h2>
+        <!-- Your product content goes here -->
+    </section>
+
+    <!-- Contact Page Content -->
+    <section id="contact" style="display: none;">
+        <h2>Contact Page</h2>
+        <!-- Your contact content goes here -->
+    </section>
+
+    <footer>
+        <!-- Your footer content goes here -->
+    </footer>
+
+    <script>
+        // JavaScript to show/hide sections based on the page
+        document.addEventListener("DOMContentLoaded", function () {
+            var path = window.location.pathname;
+            var page = path.split("/").pop();
+
+            if (page === "category.html") {
+                document.getElementById("category").style.display = "block";
+            } else if (page === "product.html") {
+                document.getElementById("product").style.display = "block";
+            } else if (page === "contact.html") {
+                document.getElementById("contact").style.display = "block";
+            }
+        });
+    </script>
+
+</body>
+</html>

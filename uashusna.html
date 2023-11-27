@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template HTML dengan CSS Sederhana</title>
+    
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    background: #01010b;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    
+}
+
+nav{
+    background: #fff;
+    border-radius: 50px;
+    padding: auto;
+    width: 50%;
+    display: inline-block;
+    margin: 32px 0;
+    text-decoration: none;
+    box-shadow: 0 25px 20px -20px rgba(0,0,0,0.4);
+    
+    
+}
+nav a {
+    text-decoration: none;
+    color: #040404;
+    
+    }
+
+    
+nav  ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 10px;
+    font-size: 15px;
+    font-weight: 100;
+    color: #040404;
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.5s;
+    
+}
+
+nav  ul li::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+}
+
+nav  ul li:hover {
+    color: #050505;
+}
+
+nav  ul li:hover::after{
+    top: 50%;
+    opacity: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #090909;
+    color: #fff;
+    
+}
+
+.wabutton{
+width:50px;
+height:50px;
+position:fixed;
+bottom:20px;
+right:20px;
+z-index:100;
+}
+
+
+    </style>
+</head>
+<body>
+
+        
+        <div class="container">
+          
+        <nav>
+            <ul>
+                <li><a class="active" href="template.html">HOME</a></li>
+                <li><a class="active" href="Tabel1.html">PRODUCT</a></li>
+                <li><a class="active" href="paragraf.html">CATEGORI</a></li>
+                <li><a class="active" href="kontak.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        </div>
+        <br>
+        <center><font color='black'><h2>Product List</h2></font> 
+    
+    <main>
+       
+        <br><br>
+        
+        <img src="tas6.webp" width=200 height=300><p>Di Buat Oleh &copy; 2023 Husna</p>> 
+        <img src="tas1.webp" width=200 height=300> 
+        <img src="tas2.webp" width=200 height=300> 
+        <img src="tas3.webp" width=200 height=300> 
+        <img src="tas4.webp" width=200 height=300> 
+        <img src="tas5.webp" width=200 height=300>
+        <br><br><br><br>
+        
+        <img src="tas7.webp" width=200 height=300> 
+        <img src="tas8.webp" width=200 height=300> 
+        <img src="tas9.jpg" width=200 height=300> 
+        <img src="tas10.jpg" width=200 height=300> 
+        <img src="tas11.jpg" width=200 height=300> 
+        <img src="tas12.jpg" width=200 height=300>
+        <br><br>
+
+    </main>
+    <br><br><br>
+    
+           
+    <footer>
+        <p>Di Buat Oleh &copy; 2023 Husna</p>
+    </footer>
+</body>
+</html>
